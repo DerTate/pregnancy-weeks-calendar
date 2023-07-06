@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="copyright" content="© 2023 DerTate (https://github.com/DerTate)">
+  <title>Pregnancy Weeks Calendar Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="pregnancy_weeks.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Pregnancy Weeks Calendar Generator</h1>
+    </div>
+
+    <div class="instructions">
+      <p>Use this page to create an iCal file containing your baby's due date, the start date of each trimester, and the weeks of your pregnancy. You will find links to helpful information about these milestones in each event's description.</p>
+      <p>You can import this file into Google Calendar by following the instructions below.</p>
+    </div>
+
+    <div class="form-container">
+      <form onsubmit="event.preventDefault(); generateICalFileAndDownload();">
+        <div class="form-group">
+          <label for="dueDate">Estimated Due Date:</label>
+          <input type="date" id="dueDate" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate iCal</button>
+      </form>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions for Google Calendar</h3>
+      <ol>
+        <li>Enter your estimated due date above.</li>
+        <li>Click the "Generate iCal" button to download the "pregnancy_calendar.ics" file.</li>
+        <li>Open Google Calendar in a web browser (go to <a href="https://calendar.google.com">calendar.google.com</a>) and sign in to your Google Account if needed.</li>
+        <li>Click the "+" button next to "Other calendars" in the left sidebar and select "Create new calendar." Give it a name like "Pregnancy Weeks."</li>
+        <li>In your Google Calendar settings, click "Import & export."</li>
+        <li>Find the "pregnancy_calendar.ics" file you downloaded from this website and select "Pregnancy Weeks" (or whatever name you chose in step 4) as the calendar to add the events to.</li>
+        <li>Click the "Import" button to start the import process.</li>
+        <li>Verify that the pregnancy calendar events are now visible in your Google Calendar.</li>
+      </ol>
+    </div>
+    <div class="instructions">
+      <p class="disclaimer">Please note: Pregnancy Weeks Calendar Generator and the materials and information it contains are not intended to, 
+        and do not constitute, medical or other health advice or diagnosis and should not be used as such. You should  always consult with a qualified 
+        physician or health professional about your specific circumstances.
+      </p>
+      <p class="copyright">Copyright &copy; 2023 <a href="https://github.com/DerTate">DerTate</a></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="pregnancy_weeks.js"></script>
+</body>
+</html>
