@@ -33,7 +33,7 @@ function generateICalFile(dueDate) {
   const secondTrimesterStartDate = new Date(startDate);
   secondTrimesterStartDate.setDate(secondTrimesterStartDate.getDate() + 13 * 7);
   const thirdTrimesterStartDate = new Date(secondTrimesterStartDate);
-  thirdTrimesterStartDate.setDate(thirdTrimesterStartDate.getDate() + 13 * 7);
+  thirdTrimesterStartDate.setDate(thirdTrimesterStartDate.getDate() + 14 * 7);
 
   const firstTrimesterStart = {
     summary: 'First Trimester Start',
