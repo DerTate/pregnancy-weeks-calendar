@@ -8,7 +8,7 @@ function generateICalFile(dueDate) {
   dueDate.setMinutes(dueDate.getMinutes() + timeZoneOffset);
 
   var startDate = new Date(dueDate);
-  startDate.setDate(startDate.getDate() - 280);
+  startDate.setDate(startDate.getDate() - 279);
 
   const calendarEvents = [];
 
